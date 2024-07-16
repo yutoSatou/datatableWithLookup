@@ -1,0 +1,27 @@
+.lookup-container{
+  /* margin-top: -1rem; */
+  margin-left: 0;
+  padding-left: 0;
+  padding-right:0;
+  width:100%;
+  height: 100%;
+  position: relative !important;
+  overflow: auto;
+}
+
+.lookup-container lightning-input-field{
+  width: 100%;
+}
+
+
+.lookup-container .slds-dropdown{
+  position: absolute !important;
+  max-height: 120px;
+  overflow: auto;
+  border-style: none;
+  z-index: 100;
+}
+
+.slds-hint-parent{
+  height:3rem;
+}

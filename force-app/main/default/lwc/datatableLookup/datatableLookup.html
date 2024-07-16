@@ -1,0 +1,13 @@
+<template>
+  <div class="lookup-container">
+    <lightning-record-edit-form object-api-name={objectApiName}>
+      <lightning-input-field
+        class="slds-var-m-around_small"
+        field-name={fieldName}
+        value={value}
+        variant="label-hidden"
+        onchange={handleLookupChange}
+      ></lightning-input-field>
+    </lightning-record-edit-form>
+  </div>
+</template>

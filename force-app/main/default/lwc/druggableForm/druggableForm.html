@@ -1,0 +1,62 @@
+<template>
+  <table
+    class="table-dragable slds-table slds-table_cell-buffer slds-table_bordered"
+    aria-label="Example default base table of Opportunities"
+  >
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+          <div class="slds-truncate" title="No">No</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="商談名">商談名</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="取引先名">取引先名</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="完了予定日">完了予定日</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="フェーズ">フェーズ</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="金額">金額</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <template if:true={records}>
+        <template for:each={records} for:item="record" for:index="index">
+          <tr
+            key={record.Id}
+            class="grabable slds-hint-parent"
+            draggable="true"
+            data-drag-id="1"
+            ondragstart={onDragStart}
+            ondragover={onDragOver}
+          >
+            <td data-label="No">
+              <div class="slds-truncate">{record.rowNum}</div>
+            </td>
+            <td data-label="商談名">
+              <div class="slds-truncate">{record.Name}</div>
+            </td>
+            <td data-label="取引先名">
+              <div class="slds-truncate">{record.Account.Name}</div>
+            </td>
+            <td data-label="完了予定日">
+              <div class="slds-truncate">{record.CloseDate}</div>
+            </td>
+            <td data-label="フェーズ">
+              <div class="slds-truncate">{record.StageName}</div>
+            </td>
+            <td data-label="金額">
+              <div class="slds-truncate">{record.Amount}</div>
+            </td>
+          </tr></template
+        >
+      </template>
+    </tbody>
+  </table>
+</template>

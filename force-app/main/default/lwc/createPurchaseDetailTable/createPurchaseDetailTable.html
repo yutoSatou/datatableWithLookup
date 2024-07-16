@@ -1,0 +1,27 @@
+<template>
+  <div class="slds-var-m-around_small">
+    <c-custom-datatable
+      class="slds-max-medium-table_stacked"
+      key-field="Id"
+      data={records}
+      columns={columns}
+      hide-checkbox-column
+      column-widths-mode="fixed"
+      oncellchange={handleCellChange}
+      onlookupchange={handleLookupChange}
+      suppress-bottom-bar="true"
+      render-config="rowHeight"
+    >
+    </c-custom-datatable>
+    <div
+      class="slds-var-m-around_small slds-text-align_center"
+      if:true={isChanged}
+    >
+      <lightning-button
+        variant="Brand"
+        onclick={handleSave}
+        label="保存"
+      ></lightning-button>
+    </div>
+  </div>
+</template>
