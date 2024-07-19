@@ -7,9 +7,11 @@ public with sharing class PurchaseDetailCreateTableController {
         Id,
         UnitPrice__c,
         Product__c,
+        Product__r.Name,
         Quantity__c,
         Purchase__c,
         Account__c,
+        Account__r.Name,
         Amount__c,
         AmountDisplay__c
       FROM PurchaseDetail__c

@@ -13,7 +13,8 @@ const columns = [
       objectApiName: 'PurchaseDetail__c',
       fieldName: 'Account__c',
       value: { fieldName: 'Account__c' },
-      rowId: { fieldName: 'Id' }
+      rowId: { fieldName: 'Id' },
+      fields: ['Account__r.Name']
     }
   },
   {
@@ -24,7 +25,8 @@ const columns = [
       objectApiName: 'PurchaseDetail__c',
       fieldName: 'Product__c',
       value: { fieldName: 'Product__c' },
-      rowId: { fieldName: 'Id' }
+      rowId: { fieldName: 'Id' },
+      fields: ['Product__r.Name']
     }
   },
   {

@@ -5,7 +5,7 @@ export default class CustomDatatable extends LightningDatatable {
   static customTypes = {
     lookup: {
       template: lookupTemplate,
-      typeAttributes: ['rowId', 'objectApiName', 'fieldName', 'value']
+      typeAttributes: ['rowId', 'objectApiName', 'fieldName', 'value', 'fields']
     }
   };
 }
